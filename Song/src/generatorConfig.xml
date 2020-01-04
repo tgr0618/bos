@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <context id="DB2Tables" targetRuntime="MyBatis3">
+        <commentGenerator>
+            <!-- 是否去除自动生成的注释 -->
+            <property name="suppressAllComments" value="false"/>
+        </commentGenerator>
+        <!-- Mysql数据库连接的信息：驱动类、连接地址、用户名、密码 -->
+        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/bos?useUnicode=true&amp; useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC&amp;useSSL=false"
+                        userId="root"
+                        password="123456">
+        </jdbcConnection>
+        <!-- Oracle数据库
+            <jdbcConnection driverClass="oracle.jdbc.OracleDriver"
+                connectionURL="jdbc:oracle:thin:@127.0.0.1:1521:yycg"
+                userId="yycg"
+                password="yycg">
+            </jdbcConnection>
+        -->
+
+        <!-- 默认为false，把JDBC DECIMAL 和NUMERIC类型解析为Integer，为true时
+        把JDBC DECIMAL 和NUMERIC类型解析为java.math.BigDecimal -->
+        <javaTypeResolver >
+            <property name="forceBigDecimals" value="false" />
+        </javaTypeResolver>
+
+        <!-- targetProject：生成POJO类的位置 -->
+        <javaModelGenerator targetPackage="zjs.entity" targetProject="src/main/java">
+            <!-- enableSubPackages:是否让schema作为包的后缀 -->
+            <property name="enableSubPackages" value="false" />
+            <!-- 从数据库返回的值被清理前后的空格 -->
+            <property name="trimStrings" value="true" />
+        </javaModelGenerator>
+
+        <!-- targetProject：mapper映射文件生成的位置 -->
+        <sqlMapGenerator targetPackage="classpath:mapper"  targetProject="src/main/java">
+            <!-- enableSubPackages:是否让schema作为包的后缀 -->
+            <property name="enableSubPackages" value="false" />
+        </sqlMapGenerator>
+
+        <!-- targetProject：mapper接口生成的的位置 -->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="zjs.mapper"  targetProject="src/main/java">
+            <!-- enableSubPackages:是否让schema作为包的后缀 -->
+            <property name="enableSubPackages" value="false" />
+        </javaClientGenerator>
+
+        <!-- 指定数据表 -->
+
+
+
+
+        <table schema="" tableName="SY_Emp"></table>
+        <table schema="" tableName="SY_Role"></table>
+        <table schema="" tableName="SY_RolesMenus"></table>
+        <table schema="" tableName="SY_Menus"></table>
+        <table schema="" tableName="SY_Units"></table>
+        <table schema="" tableName="BAS_BasicArchives"></table>
+        <table schema="" tableName="BAS_BasicArchivesEntry"></table>
+        <table schema="" tableName="BAS_DeliveryStandard"></table>
+        <table schema="" tableName="BAS_ShuttleBus"></table>
+        <table schema="" tableName="BAS_Substitute"></table>
+        <table schema="" tableName="BAS_Area"></table>
+        <table schema="" tableName="BAS_Partition"></table>
+        <table schema="" tableName="BAS_ZoneInfo"></table>
+        <table schema="" tableName="BAS_ZoneCustomInfo"></table>
+        <table schema="" tableName="BAS_AssociatedAddress"></table>
+        <table schema="" tableName="BAS_AssociateMember"></table>
+        <table schema="" tableName="BAS_StandarTime"></table>
+        <table schema="" tableName="ACC_BusinessAdmissibility"></table>
+        <table schema="" tableName="ACC_WorkOrder"></table>
+        <table schema="" tableName="ACC_WorkSheet"></table>
+        <table schema="" tableName="DIS_DispatchHistory"></table>
+        <table schema="" tableName="DIS_WorkOrderSign"></table>
+        <table schema="" tableName="DIS_PropagandaTask"></table>
+        <table schema="" tableName="RET_ReturnList"></table>
+        <table schema="" tableName="PAC_Packaging"></table>
+        <table schema="" tableName="PAC_Stock"></table>
+        <table schema="" tableName="PAC_StockItem"></table>
+        <table schema="" tableName="BIGLOG_LogisticsControlTable"></table>
+        <table schema="" tableName="SOR_Storage"></table>
+        <table schema="" tableName="SOR_StorageDetails"></table>
+        <table schema="" tableName="SOR_OutBound"></table>
+        <table schema="" tableName="SOR_OutBoundDetails"></table>
+        <table schema="" tableName="SOR_CheckBound"></table>
+        <table schema="" tableName="SOR_CheckBoundDetails"></table>
+        <table schema="" tableName="SOR_Package"></table>
+        <table schema="" tableName="SOR_PackageDetails"></table>
+        <table schema="" tableName="SOR_Abnormal"></table>
+        <table schema="" tableName="IAE_Departure"></table>
+        <table schema="" tableName="IAE_Extract"></table>
+        <table schema="" tableName="IAE_Arrival"></table>
+        <table schema="" tableName="IAE_LineResource"></table>
+        <table schema="" tableName="IAE_TimeInput"></table>
+        <table schema="" tableName="LOG_Track"></table>
+        <table schema="" tableName="LOG_Logistics"></table>
+        <table schema="" tableName="LOG_LogisticsDetails"></table>
+        <table schema="" tableName="LOG_LogisticsTransfer"></table>
+
+
+
+
+
+        <!-- 有些表的字段需要指定java类型
+        <table schema="DB2ADMIN" tableName="ALLTYPES" domainObjectName="Customer" >
+          <property name="useActualColumnNames" value="true"/>
+          <generatedKey column="ID" sqlStatement="DB2" identity="true" />
+          <columnOverride column="DATE_FIELD" property="startDate" />
+          <ignoreColumn column="FRED" />
+          <columnOverride column="LONG_VARCHAR_FIELD" jdbcType="VARCHAR" />
+        </table> -->
+
+    </context>
+</generatorConfiguration>
