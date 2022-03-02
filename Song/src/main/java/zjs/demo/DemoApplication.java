@@ -9,6 +9,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @SpringBootApplication
 @EnableTransactionManagement
 @ComponentScan("zjs.controller")//配置扫描的控制层
+@ComponentScan("zjs.service")//配置扫描的控制层
 @MapperScan("zjs.mapper")//配置扫描的dao层
 public class DemoApplication {
 

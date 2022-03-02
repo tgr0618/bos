@@ -15,7 +15,7 @@ public class GeneratorSqlmap {
         List<String> warnings = new ArrayList<String>();
         boolean overwrite = true;
         // 指定配置文件
-        File configFile = new File("C:\\Users\\Administrator\\IdeaProjects\\Song\\src\\generatorConfig.xml");
+        File configFile = new File("D:\\phpstudy_pro\\bos\\bos-master\\Song\\src\\generatorConfig.xml");
         ConfigurationParser cp = new ConfigurationParser(warnings);
         Configuration config = cp.parseConfiguration(configFile);
         DefaultShellCallback callback = new DefaultShellCallback(overwrite);
@@ -27,6 +27,7 @@ public class GeneratorSqlmap {
     public static void main(String[] args) {
         try {
             GeneratorSqlmap generatorSqlmap = new GeneratorSqlmap();
+
             generatorSqlmap.generator();
         } catch (Exception e) {
             e.printStackTrace();
